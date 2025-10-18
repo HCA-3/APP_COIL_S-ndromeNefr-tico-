@@ -28,14 +28,6 @@ open class BaseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Aplicar el tema guardado después de crear la actividad
-        try {
-            ThemeManager(this).applySavedTheme()
-        } catch (e: Exception) {
-            // Si hay un error con el tema, continuar con el tema por defecto
-            e.printStackTrace()
-        }
-
         // Aplicar el idioma guardado al crear la actividad
         applyLanguage()
     }

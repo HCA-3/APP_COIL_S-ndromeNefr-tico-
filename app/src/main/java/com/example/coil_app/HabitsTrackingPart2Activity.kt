@@ -87,37 +87,33 @@ class HabitsTrackingPart2Activity : BaseActivity() {
     }
 
     private fun getRadioText(checkedId: Int): String {
-        // Temporal: mapeo basado en posición hasta que los IDs se generen correctamente
         return when (checkedId) {
-            // Estos IDs se actualizarán cuando Android Studio regenere R.java
-            // Por ahora, usamos un mapeo genérico basado en el RadioGroup
+            // Agua
+            R.id.rb_less_1l -> "Menos de 1 litro"
+            R.id.rb_1_2l -> "1-2 litros"
+            R.id.rb_more_2l -> "Más de 2 litros"
 
-            // Agua (primer RadioGroup)
-            2131296387 -> "Menos de 1 litro"  // rb_less_1l
-            2131296388 -> "1-2 litros"         // rb_1_2l
-            2131296389 -> "Más de 2 litros"    // rb_more_2l
+            // Sal
+            R.id.rb_low_salt -> "Bajo"
+            R.id.rb_moderate_salt -> "Moderado"
+            R.id.rb_high_salt -> "Alto"
 
-            // Sal (segundo RadioGroup)
-            2131296390 -> "Bajo"               // rb_low_salt
-            2131296391 -> "Moderado"           // rb_moderate_salt
-            2131296392 -> "Alto"               // rb_high_salt
+            // Ejercicio
+            R.id.rb_never_exercise -> "Nunca"
+            R.id.rb_1_2_weekly -> "1-2 veces por semana"
+            R.id.rb_3_plus_weekly -> "3+ veces por semana"
 
-            // Ejercicio (tercer RadioGroup)
-            2131296393 -> "Nunca"              // rb_never_exercise
-            2131296394 -> "1-2 veces por semana" // rb_1_2_weekly
-            2131296395 -> "3+ veces por semana"  // rb_3_plus_weekly
+            // Medicamentos
+            R.id.rb_no_meds -> "No tomo medicamentos"
+            R.id.rb_bp_meds -> "Medicamentos para presión arterial"
+            R.id.rb_pain_meds -> "Analgésicos/antiinflamatorios"
+            R.id.rb_other_meds -> "Otros medicamentos"
 
-            // Medicamentos (cuarto RadioGroup)
-            2131296396 -> "No tomo medicamentos"  // rb_no_meds
-            2131296397 -> "Medicamentos para presión arterial" // rb_bp_meds
-            2131296398 -> "Analgésicos/antiinflamatorios"     // rb_pain_meds
-            2131296399 -> "Otros medicamentos"                // rb_other_meds
-
-            // Condiciones crónicas (quinto RadioGroup)
-            2131296400 -> "Ninguna"            // rb_none_chronic
-            2131296401 -> "Diabetes"           // rb_diabetes
-            2131296402 -> "Hipertensión"       // rb_hypertension
-            2131296403 -> "Enfermedad autoinmune" // rb_autoimmune
+            // Condiciones crónicas
+            R.id.rb_none_chronic -> "Ninguna"
+            R.id.rb_diabetes -> "Diabetes"
+            R.id.rb_hypertension -> "Hipertensión"
+            R.id.rb_autoimmune -> "Enfermedad autoinmune"
 
             else -> "Respuesta seleccionada"
         }
@@ -129,7 +125,7 @@ class HabitsTrackingPart2Activity : BaseActivity() {
 
         Toast.makeText(this, "Evaluación completada exitosamente", Toast.LENGTH_LONG).show()
 
-        // Ir a la pantalla de resultados sin flags que causan problemas
+        // Ir a la pantalla de resultados
         val intent = Intent(this, SurveyResultsActivity::class.java)
         startActivity(intent)
         finish()

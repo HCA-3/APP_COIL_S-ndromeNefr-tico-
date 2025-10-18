@@ -26,18 +26,15 @@ class ProfileActivity : BaseActivity() {
     private lateinit var optionChangePassword: LinearLayout
     private lateinit var optionSurveyResults: LinearLayout
     private lateinit var optionSurveyHistory: LinearLayout
-    private lateinit var optionThemeSettings: LinearLayout
     private lateinit var btnLogout: AppCompatButton
 
     private lateinit var sharedPreferences: SharedPreferences
-    private lateinit var themeManager: ThemeManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
         sharedPreferences = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
-        themeManager = ThemeManager(this)
 
         initViews()
         setupToolbar()
@@ -56,7 +53,6 @@ class ProfileActivity : BaseActivity() {
         optionChangePassword = findViewById(R.id.option_change_password)
         optionSurveyResults = findViewById(R.id.option_survey_results)
         optionSurveyHistory = findViewById(R.id.option_survey_history)
-        optionThemeSettings = findViewById(R.id.option_theme_settings)
         btnLogout = findViewById(R.id.btn_logout)
     }
 
@@ -114,10 +110,6 @@ class ProfileActivity : BaseActivity() {
 
         optionSurveyHistory.setOnClickListener {
             startActivity(Intent(this, SurveyHistoryActivity::class.java))
-        }
-
-        optionThemeSettings.setOnClickListener {
-            showThemeSelectorDialog()
         }
 
         btnLogout.setOnClickListener {
@@ -241,76 +233,5 @@ class ProfileActivity : BaseActivity() {
             }
             .setNegativeButton("No", null)
             .show()
-    }
-
-    private fun showThemeSelectorDialog() {
-        val dialogView = layoutInflater.inflate(R.layout.dialog_theme_selector, null)
-        val optionLightTheme = dialogView.findViewById<LinearLayout>(R.id.option_light_theme)
-        val optionDarkTheme = dialogView.findViewById<LinearLayout>(R.id.option_dark_theme)
-        val optionSystemTheme = dialogView.findViewById<LinearLayout>(R.id.option_system_theme)
-        val rbLightTheme = dialogView.findViewById<android.widget.RadioButton>(R.id.rb_light_theme)
-        val rbDarkTheme = dialogView.findViewById<android.widget.RadioButton>(R.id.rb_dark_theme)
-        val rbSystemTheme = dialogView.findViewById<android.widget.RadioButton>(R.id.rb_system_theme)
-
-        // Obtener el tema actual
-        val currentTheme = themeManager.getSavedTheme()
-
-        // Marcar la opción actual
-        when (currentTheme) {
-            ThemeManager.THEME_LIGHT -> rbLightTheme.isChecked = true
-            ThemeManager.THEME_DARK -> rbDarkTheme.isChecked = true
-            ThemeManager.THEME_SYSTEM -> rbSystemTheme.isChecked = true
-        }
-
-        val dialog = AlertDialog.Builder(this)
-            .setTitle(getString(R.string.theme_settings))
-            .setView(dialogView)
-            .setPositiveButton("Aceptar", null)
-            .setNegativeButton("Cancelar", null)
-            .create()
-
-        dialog.show()
-
-        // Configurar listeners para las opciones
-        optionLightTheme.setOnClickListener {
-            rbLightTheme.isChecked = true
-            rbDarkTheme.isChecked = false
-            rbSystemTheme.isChecked = false
-        }
-
-        optionDarkTheme.setOnClickListener {
-            rbLightTheme.isChecked = false
-            rbDarkTheme.isChecked = true
-            rbSystemTheme.isChecked = false
-        }
-
-        optionSystemTheme.setOnClickListener {
-            rbLightTheme.isChecked = false
-            rbDarkTheme.isChecked = false
-            rbSystemTheme.isChecked = true
-        }
-
-        // Configurar el botón positivo
-        dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
-            val selectedTheme = when {
-                rbLightTheme.isChecked -> ThemeManager.THEME_LIGHT
-                rbDarkTheme.isChecked -> ThemeManager.THEME_DARK
-                rbSystemTheme.isChecked -> ThemeManager.THEME_SYSTEM
-                else -> ThemeManager.THEME_SYSTEM
-            }
-
-            // Guardar y aplicar el tema
-            themeManager.saveTheme(selectedTheme)
-            themeManager.applyTheme(selectedTheme)
-
-            Toast.makeText(this, getString(R.string.theme_changed), Toast.LENGTH_SHORT).show()
-
-            // Mostrar mensaje de reinicio si es necesario
-            if (currentTheme != selectedTheme) {
-                Toast.makeText(this, getString(R.string.restart_required), Toast.LENGTH_LONG).show()
-            }
-
-            dialog.dismiss()
-        }
     }
 }
