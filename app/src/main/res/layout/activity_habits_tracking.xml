@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cosmos_blue"
+    tools:context=".HabitsTrackingActivity">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/cosmos_blue"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:title="@string/habits_tracking"
+        app:titleTextColor="@color/white" />
+
+    <!-- Contenido principal -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Tarjeta de introducción -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:text="@string/survey_intro"
+                        android:textColor="@color/cosmos_blue"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="@string/survey_description"
+                        android:textColor="@color/cosmos_blue"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Sección 1: Síntomas Generales -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:text="@string/general_symptoms"
+                        android:textColor="@color/cosmos_blue"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <!-- Pregunta 1: Edema -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/q1_edema"
+                        android:textColor="@color/cosmos_blue"
+                        android:textSize="16sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_edema"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rb_no_edema"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_no"
+                            android:textColor="@color/cosmos_blue" />
+
+                        <RadioButton
+                            android:id="@+id/rb_mild_edema"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_mild"
+                            android:textColor="@color/cosmos_blue" />
+
+                        <RadioButton
+                            android:id="@+id/rb_moderate_edema"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_moderate"
+                            android:textColor="@color/cosmos_blue" />
+
+                        <RadioButton
+                            android:id="@+id/rb_severe_edema"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_severe"
+                            android:textColor="@color/cosmos_blue" />
+                    </RadioGroup>
+
+                    <!-- Pregunta 2: Cambios en orina -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/q2_urine_changes"
+                        android:textColor="@color/cosmos_blue"
+                        android:textSize="16sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_urine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rb_normal_urine"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_normal"
+                            android:textColor="@color/cosmos_blue" />
+
+                        <RadioButton
+                            android:id="@+id/rb_dark_urine"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_dark_urine"
+                            android:textColor="@color/cosmos_blue" />
+
+                        <RadioButton
+                            android:id="@+id/rb_bloody"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_bloody"
+                            android:textColor="@color/cosmos_blue" />
+
+                        <RadioButton
+                            android:id="@+id/rb_foamy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_foamy"
+                            android:textColor="@color/cosmos_blue" />
+                    </RadioGroup>
+
+                    <!-- Pregunta 3: Fatiga -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/q3_fatigue"
+                        android:textColor="@color/cosmos_blue"
+                        android:textSize="16sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_fatigue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rb_no_fatigue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_no"
+                            android:textColor="@color/cosmos_blue" />
+
+                        <RadioButton
+                            android:id="@+id/rb_mild_fatigue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_mild"
+                            android:textColor="@color/cosmos_blue" />
+
+                        <RadioButton
+                            android:id="@+id/rb_moderate_fatigue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_moderate"
+                            android:textColor="@color/cosmos_blue" />
+
+                        <RadioButton
+                            android:id="@+id/rb_severe_fatigue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_severe"
+                            android:textColor="@color/cosmos_blue" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Sección 2: Historial Médico -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:text="@string/medical_history"
+                        android:textColor="@color/cosmos_blue"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <!-- Pregunta 4: Infecciones recientes -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/q4_recent_infections"
+                        android:textColor="@color/cosmos_blue"
+                        android:textSize="16sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_infections"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rb_no_infections"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_no"
+                            android:textColor="@color/cosmos_blue" />
+
+                        <RadioButton
+                            android:id="@+id/rb_throat_infection"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_throat_infection"
+                            android:textColor="@color/cosmos_blue" />
+
+                        <RadioButton
+                            android:id="@+id/rb_skin_infection"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_skin_infection"
+                            android:textColor="@color/cosmos_blue" />
+
+                        <RadioButton
+                            android:id="@+id/rb_other_infection"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_other"
+                            android:textColor="@color/cosmos_blue" />
+                    </RadioGroup>
+
+                    <!-- Pregunta 5: Presión arterial -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/q5_blood_pressure"
+                        android:textColor="@color/cosmos_blue"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/blood_pressure_info"
+                        android:textColor="@color/blue_marble"
+                        android:textSize="12sp"
+                        android:fontFamily="sans-serif" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_blood_pressure"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rb_normal_bp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_normal"
+                            android:textColor="@color/cosmos_blue" />
+
+                        <RadioButton
+                            android:id="@+id/rb_high_bp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_high"
+                            android:textColor="@color/cosmos_blue" />
+
+                        <RadioButton
+                            android:id="@+id/rb_dont_know_bp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_dont_know"
+                            android:textColor="@color/cosmos_blue" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Botón de continuar -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_continue_survey"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/varden"
+                android:text="@string/continue_survey"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

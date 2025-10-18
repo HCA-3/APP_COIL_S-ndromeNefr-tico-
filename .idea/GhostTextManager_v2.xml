@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GhostTextManager">
+    <option name="inputs">
+      <map>
+        <entry key="9 Build Coil_app: failed At 17/10/2025 6:51 p. m. with 6 errors&#10;₺ Download info&#10;0 :app:mergeDebugResources 5 errors&#10;&lt;/&gt; styles.xml app\src\main\res\values 2 errors&#10;Duplicate resources&#10;9 Duplicate resources&#10;&lt;/&gt; themes.xml app\src\main\res\values 2 errors&#10;[style/Theme.Coil_app] C:\Users\dsant\AndroidStudioProjects\Coil_app\app\src\main\res\values\styles.xml[style,&#10;:app:packageDebugResources&#10;&#10;Android resource linking failed&#10;com.example.coil_app-mergeDebugResources-41:/values/values.xml:7606: error: style attribute 'attr/colorBackground (aka com.example.coil_app:attr/colorBackground)' not found.&#10;com.example.coil_app-mergeDebugResources-41:/values/values.xml:7618: error: style attribute 'attr/colorBackground (aka com.example.coil_app:attr/colorBackground)' not found.&#10;com.example.coil_app-mergeDebugResources-41:/values/values.xml:7630: error: style attribute 'attr/colorBackground (aka com.example.coil_app:attr/colorBackground)' not found.&#10;error: failed linking references.&#10;&#10;salen estos problemas arreglalos">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760745456766" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="Error de registro: An internal error has&#10;occurred. [CONFIGURATION_NOT_FOUND ]">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760733139544" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="Pantalla principal con información del síndrome nefrítico&#10;Menú de navegación&#10;&#10;vamos a hacer esto primero:de acuerdo a las imagenes queiro que coloques la informacion primero el titlulo y la opcion para el botod de haz clik aqui para ir a otra pantalla en la que muestres la inforancion del titulo y asi con cada una de las cosas que aparecen en la iamgen: &#10;- Conoce sobre el síndrome nefrítico.&#10;- Conoce sobre glomerulonefritis postinfecciosa&#10;- Seguimiento de hábitos.(quiero que se pueda hacer como una encuesta en la que abarque todo para dar una especie de diaccnostico de este sindrome, pero en alguna parte decir que aun asi confirme con un medico)">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760715728646" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="a la hora de ejecutar el programa salen errores como se muestran en la foto">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760720037603" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="ahora la aplicaicon corre pero cuando entro al perfil se cierra la aplicaicon.&#10;y cuando termino de hacer la encuesta y le doy terminar encuesta sigo en la encuesta, corrige esto">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760746565678" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="ahora sale este error al ejecuarse: &#10;e: file:///C:/Users/dsant/AndroidStudioProjects/Coil_app/app/src/main/java/com/example/coil_app/RegisterActivity.kt:252:2 Syntax error: Missing '}.&#10;Ask Gemini&#10;mas lo que dice en la foto.&#10;arreglalo">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760726054043" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="como vas">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760710654780" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="continua con la parte 2 y despues has lo de la navegacion">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760718226437" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="continua do de te quedaste">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760732663380" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="continua donde te quedaste">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760721331325" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="continua en donde te quedaste, si es muy largo haslo en dos partes">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760717532769" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="cuando me estoy registrando en la aplicacion no esta funcionando dice error de registro, porque pasa esto">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760725531538" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="cuando ya se ingresa a la aplicacion queiro que aparezca recuadro para lo del perfir del usuario, cambiar contraseña y todo lo correspondiente, y tambien que aparezca los resultados del seguimiento de la encuesta">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760734051982" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="despues de selecionar el idioma se debe de hacer un registro en la aplicacion  asi como se muestra en la imagen pedir datos normal de registro de la aplicaicon. y para esta parte lo que quiero preguntarte es si se puede almacenar la informacion en el drive del propio correo electronico o se puede manejar una api para que almacene eso pero que no deje de funcionar por si se guardan cambios y demas a futuro. &#10;respondeme esto antes de hacer esta parte">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760710259633" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="en la parte de resultados de la encuesta, en analisis de sintomastodos dan como respuesta no evaludo y no respondido, y en la parte de precion arterial como medimos eso o que ?&#10;y en la parte de analisis de habitos todo tambien aparece con no respondido acomoda eso tambieon o agrega las preguntas segun corresponda">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760737047729" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="este es el error que sale cuando se registra">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760733061329" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="hagamos esto por el momento no usemos lo de registrarnos dejalo solo comentarios despues lo arreglamos para ver lo demas de la aplicacion">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760733484157" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="implementa esto: que me dice firebase, Agrega el complemento como una dependencia a tu archivo build.gradle.kts de nivel de proyecto:&#10;&#10;Archivo de Gradle de nivel de raíz (nivel de proyecto) (&lt;project&gt;/build.gradle.kts):&#10;plugins {&#10;  // ...&#10;&#10;  // Add the dependency for the Google services Gradle plugin&#10;  id(&quot;com.google.gms.google-services&quot;) version &quot;4.4.4&quot; apply false&#10;&#10;}&#10;&#10;Luego, en el archivo build.gradle.kts del módulo (nivel de la app), agrega el complemento google-services y cualquier SDK de Firebase que quieras usar en tu app:&#10;&#10;Archivo de Gradle del módulo (nivel de app) (&lt;project&gt;/&lt;app-module&gt;/build.gradle.kts):&#10;&#10;plugins {&#10;  id(&quot;com.android.application&quot;)&#10;&#10;  // Add the Google services Gradle plugin&#10;  id(&quot;com.google.gms.google-services&quot;)&#10;&#10;  ...&#10;}&#10;&#10;dependencies {&#10;  // Import the Firebase BoM&#10;  implementation(platform(&quot;com.google.firebase:firebase-bom:34.4.0&quot;))&#10;&#10;&#10;  // TODO: Add the dependencies for Firebase products you want to use&#10;  // When using the BoM, don't specify versions in Firebase dependencies&#10;  implementation(&quot;com.google.firebase:firebase-analytics&quot;)&#10;&#10;&#10;  // Add the dependencies for any other desired Firebase products&#10;  // https://firebase.google.com/docs/android/setup#available-libraries&#10;}">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760714328846" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="implementa todo lo que me dices que se puede inplementar">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760735001216" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="la gama de colores que vamos a usar es esta:&#10;Gochujang Red:#780000&#10;Crimson Blaze: #C1121F&#10;Varden: #AE1F23&#10;Cosmos blue: #003049&#10;Blue Marble:#669BBC&#10;y lo primero que quiero que hagas al inciciar la palicaion es pedir que seleccione un idioma ya sea ingles o español algo asi como muestra la imagen.&#10;iniciemos por eso y despues te voy diciendo que mas nececito despues de selecionar el idioma">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760709695223" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="la pantalla de login no esta esa debe de aparecer despues de escoger el idioma ya sea el login o el registro, confirma me eso">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760714873630" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="me sale este error al ejecutar el programae: file:///C:/Users/dsant/AndroidStudioProjects/Coil_app/app/src/main/java/com/example/coil_app/MainActivity.kt:65:22 Unresolved reference 'Intent'.&#10;Ask Gemini">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760723354303" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="me salieron estos errores al ejecutar:&#10;Found item String/continue_survey more than one time&#10;&#10;Found item String/continue_survey more than one time">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760743568897" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="me siguen apareciendo estos errores:&#10;9 Build Coil_app: failed At 17/10/2025 12:06 p. m. with 7 errors&#10;L Download info&#10;&#10;:app:checkDebugAarMetadata 1 error&#10;9 Could not resolve com.google.firebase:firebase-auth-ktx:&#10;:app:processDebugNavigationResources 1 error&#10;0 :app:processDebugGoogleServices 1 error&#10;:app:mergeDebugAssets 1 error&#10;:app:checkDebugDuplicateClasses 1 error&#10;:app:desugarDebugFileDependencies 1 error&#10;:app:mergeDebugNativeLibs 1 error&#10;&#10;1 sec, 340 ms&#10;&#10;121 ms&#10;&#10;&gt;&#10;&#10;&gt;&#10;&#10;&gt;&#10;&#10;&gt;&#10;&#10;&gt;&#10;&#10;4 ms&#10;&#10;10 ms&#10;&#10;5 ms&#10;&#10;4 ms&#10;&#10;3 ms&#10;&#10;5 ms">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760720836482" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="noto que la aplicacion despues de escoger el idiamo esta en los dos idiomas, lo que quiero que hagas es que despues de escoger el idioma todo en adelante salga en el idioma que se escogio y que no se mescle">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760726717665" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="queiro hacer una aplicaicon del sindrome nefritico, te voy a ir pidiendo las cosas parte por parte bueno, si tienes preguntas siempre puedes hacerlas">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760709510540" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="quiero que acomodes un historico en la parte del seguimiento pero ver todas las evaluaciones que se hagan">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760739651357" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="quiero que le agregues a perfil de usuario que tipo de iliminacion quiere si la clara, la oscura o la del sistema y se pueda ajustar a esto">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760742282366" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="si implemntalo">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760714927520" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="siguen saliendo errores revisa todo y acomodalo">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760743736142" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="solo sincronizalo pero aun no lo vamos a provar">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760714759908" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="tengo estos problemas:&#10;9 Build Coil_app: failed At 17/10/2025 6:51 p. m. with 6 errors&#10;₺ Download info&#10;0 :app:mergeDebugResources 5 errors&#10;&lt;/&gt; styles.xml app\src\main\res\values 2 errors&#10;Duplicate resources&#10;9 Duplicate resources&#10;&lt;/&gt; themes.xml app\src\main\res\values 2 errors&#10;[style/Theme.Coil_app] C:\Users\dsant\AndroidStudioProjects\Coil_app\app\src\main\res\values\styles.xml[style,&#10;:app:packageDebugResources">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760745158325" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="tengo fallas cuando en la parte del perfil le doy al ver historial, sale error y se detiene la aplicaicon.&#10;otra cosa por adicionar despues de completar la encuesta debe aparecer otro boton de ir al menu o continuar.">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760742999052" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="tengo un problema con la ejecucion del programa, me parece este error:e: file:///C:/Users/dsant/AndroidStudioProjects/Coil_app/app/src/main/java/com/example/coil_app/SurveyHistoryActivity.kt:191:57 Unresolved reference 'fatiga'.&#10;el de la imgen y este">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760742038632" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="terminaste la implementacion que estabas habiendo del Firebase">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760710687817" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="usemos el Firebase y aplica los cambios para esto que te indique en el mensaje anterior">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760710371467" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="ya hice los dos primeros pasos pero no se como hacer el paso 3, ya lo descargue pero no se donde remplazarlo, explicame eso">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760712731086" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="ya lo remplace">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1760712820417" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

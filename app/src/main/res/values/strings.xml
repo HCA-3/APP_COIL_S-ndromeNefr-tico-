@@ -1,0 +1,185 @@
+<resources>
+    <string name="app_name">Síndrome Nefrítico</string>
+
+    <!-- Pantalla de selección de idioma -->
+    <string name="select_language">Seleccionar Idioma</string>
+    <string name="welcome">Bienvenido</string>
+    <string name="language_description">Por favor, selecciona tu idioma preferido para continuar</string>
+    <string name="spanish">Español</string>
+    <string name="english">English</string>
+    <string name="continue_btn">Continuar</string>
+
+    <!-- Pantalla de registro -->
+    <string name="create_account">Crear Cuenta</string>
+    <string name="full_name">Nombre completo</string>
+    <string name="email">Correo electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="confirm_password">Confirmar contraseña</string>
+    <string name="birth_date">Fecha de nacimiento</string>
+    <string name="phone">Teléfono</string>
+    <string name="register">Registrarse</string>
+    <string name="already_have_account">¿Ya tienes una cuenta? Inicia sesión</string>
+
+    <!-- Pantalla de login -->
+    <string name="welcome_back">Bienvenido de nuevo</string>
+    <string name="login_description">Inicia sesión para acceder a tu cuenta</string>
+    <string name="forgot_password">¿Olvidaste tu contraseña?</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="no_account">¿No tienes una cuenta?</string>
+    <string name="register_here">Regístrate aquí</string>
+
+    <!-- Mensajes de error y validación -->
+    <string name="error_empty_field">Este campo es obligatorio</string>
+    <string name="error_invalid_email">Correo electrónico inválido</string>
+    <string name="error_password_short">La contraseña debe tener al menos 6 caracteres</string>
+    <string name="error_password_mismatch">Las contraseñas no coinciden</string>
+    <string name="error_registration_failed">Error en el registro. Inténtalo de nuevo.</string>
+    <string name="error_login_failed">Error en el inicio de sesión. Verifica tus credenciales.</string>
+    <string name="registration_success">Registro exitoso</string>
+    <string name="login_success">Inicio de sesión exitoso</string>
+
+    <!-- Pantalla principal -->
+    <string name="app_title">Síndrome Nefrítico</string>
+    <string name="app_subtitle">Información y seguimiento para tu salud renal</string>
+    <string name="nephrotic_syndrome">Conoce sobre el síndrome nefrítico</string>
+    <string name="nephrotic_description">Información completa sobre síntomas, causas y tratamientos del síndrome nefrítico</string>
+    <string name="postinfectious_glomerulonephritis">Conoce sobre glomerulonefritis postinfecciosa</string>
+    <string name="glomerulonephritis_description">Guía detallada sobre esta condición renal postinfecciosa</string>
+    <string name="habits_tracking">Seguimiento de hábitos</string>
+    <string name="habits_description">Evalúa tus síntomas y hábitos para un mejor seguimiento de tu salud</string>
+    <string name="click_here">Haz clic aquí</string>
+
+    <!-- Información del síndrome nefrítico -->
+    <string name="what_is_nephrotic">¿Qué es el síndrome nefrítico?</string>
+    <string name="nephrotic_definition">El síndrome nefrítico es un conjunto de signos y síntomas que indican inflamación de los glomérulos (pequeños filtros en los riñones). Esta condición afecta la capacidad de los riñones para eliminar desechos y exceso de fluidos del cuerpo.</string>
+    <string name="symptoms">Síntomas principales</string>
+    <string name="nephrotic_symptoms">• Hematuria (sangre en la orina)\n• Proteinuria (exceso de proteína en la orina)\n• Edema (hinchazón, especialmente en cara, manos y pies)\n• Hipertensión arterial\n• Reducción en la producción de orina\n• Fatiga y debilidad</string>
+    <string name="causes">Causas comunes</string>
+    <string name="nephrotic_causes">• Infecciones (estreptocócicas, virales)\n• Enfermedades autoinmunes (lupus, vasculitis)\n• Enfermedades genéticas\n• Fármacos y toxinas\n• Enfermedades sistémicas (diabetes, amiloidosis)</string>
+    <string name="treatment">Tratamiento</string>
+    <string name="nephrotic_treatment">El tratamiento depende de la causa subyacente:\n• Medicamentos inmunosupresores\n• Corticosteroides\n• Control de la presión arterial\n• Restricción de sal y proteínas en la dieta\n• Diuréticos para controlar el edema\n• Tratamiento de la enfermedad causal</string>
+    <string name="medical_warning">⚠️ Importante: Esta información es educativa. Siempre consulte a un médico para un diagnóstico y tratamiento adecuados.</string>
+
+    <!-- Información de glomerulonefritis postinfecciosa -->
+    <string name="what_is_glomerulonephritis">¿Qué es la glomerulonefritis postinfecciosa?</string>
+    <string name="glomerulonephritis_definition">La glomerulonefritis postinfecciosa es una enfermedad renal que ocurre después de una infección, comúnmente bacteriana. Se caracteriza por la inflamación de los glomérulos renales debido a una respuesta inmune anormal contra antígenos infecciosos.</string>
+    <string name="glomerulonephritis_symptoms_title">Síntomas característicos</string>
+    <string name="glomerulonephritis_symptoms">• Orina oscura o color té\n• Hematuria macroscópica (sangre visible en orina)\n• Edema facial y periférico\n• Hipertensión arterial\n• Reducción del volumen urinario\n• Fatiga y malestar general\n• Fiebre previa (1-3 semanas antes)</string>
+    <string name="glomerulonephritis_causes_title">Infecciones precipitantes</string>
+    <string name="glomerulonephritis_causes">• Infección estreptocócica (faringitis o escarlatina)\n• Infecciones de piel (impétigo)\n• Endocarditis bacteriana\n• Neumonía\n• Hepatitis viral\n• VIH\n• Meningococcia</string>
+    <string name="glomerulonephritis_diagnosis_title">Diagnóstico</string>
+    <string name="glomerulonephritis_diagnosis">• Análisis de orina (hematuria, proteinuria)\n• Pruebas de función renal (creatinina, BUN)\n• Niveles de complemento sérico (C3, C4)\n• Anticuerpos antiestreptolisina O (ASO)\n• Biopsia renal en casos complejos\n• Ecografía renal</string>
+    <string name="glomerulonephritis_treatment_title">Tratamiento</string>
+    <string name="glomerulonephritis_treatment">• Tratamiento de la infección subyacente\n• Control de la presión arterial\n• Restricción de sal y líquidos\n• Diuréticos para manejar el edema\n• Corticosteroides en casos severos\n• Monitorización estrecha de la función renal\n• Hospitalización en casos graves</string>
+
+    <!-- Encuesta de seguimiento de hábitos -->
+    <string name="survey_intro">Evaluación de Síntomas</string>
+    <string name="survey_description">Responde las siguientes preguntas para evaluar tus síntomas y hábitos. Esta evaluación es solo informativa y no reemplaza una consulta médica.</string>
+    <string name="general_symptoms">Síntomas Generales</string>
+    <string name="medical_history">Historial Médico Reciente</string>
+    <string name="q1_edema">1. ¿Has notado hinchazón (edema) en tu cara, manos o pies?</string>
+    <string name="q2_urine_changes">2. ¿Has notado cambios en el color o apariencia de tu orina?</string>
+    <string name="q3_fatigue">3. ¿Cómo calificarías tu nivel de fatiga en la última semana?</string>
+    <string name="q4_recent_infections">4. ¿Has tenido alguna infección reciente (últimas 2-3 semanas)?</string>
+    <string name="q5_blood_pressure">5. ¿Cómo está tu presión arterial habitualmente?</string>
+    <string name="blood_pressure_info">Puedes medir tu presión arterial en farmacias, con un tensiómetro casero o en consultas médicas. Valores normales: menos de 120/80 mmHg.</string>
+
+    <!-- Opciones de respuesta -->
+    <string name="option_no">No</string>
+    <string name="option_mild">Leve</string>
+    <string name="option_moderate">Moderado/a</string>
+    <string name="option_severe">Severo/a</string>
+    <string name="option_normal">Normal</string>
+    <string name="option_dark_urine">Orina oscura/color té</string>
+    <string name="option_bloody">Con sangre</string>
+    <string name="option_foamy">Espumosa</string>
+    <string name="option_throat_infection">Infección de garganta</string>
+    <string name="option_skin_infection">Infección de piel</string>
+    <string name="option_other">Otra</string>
+    <string name="option_high">Alta</string>
+    <string name="option_dont_know">No lo sé</string>
+    <string name="continue_survey">Continuar Evaluación</string>
+
+    <!-- Parte 2 de la encuesta -->
+    <string name="lifestyle_habits">Hábitos de Vida</string>
+    <string name="medications_conditions">Medicamentos y Condiciones</string>
+    <string name="q6_water_intake">6. ¿Cuánta agua bebes diariamente?</string>
+    <string name="q7_salt_intake">7. ¿Cómo calificarías tu consumo de sal?</string>
+    <string name="q8_exercise">8. ¿Con qué frecuencia haces ejercicio?</string>
+    <string name="q9_medications">9. ¿Tomas algún medicamento actualmente?</string>
+    <string name="q10_chronic_conditions">10. ¿Tienes alguna condición crónica?</string>
+
+    <!-- Opciones adicionales -->
+    <string name="option_less_1l">Menos de 1 litro</string>
+    <string name="option_1_2l">1-2 litros</string>
+    <string name="option_more_2l">Más de 2 litros</string>
+    <string name="option_low">Bajo</string>
+    <string name="option_never">Nunca</string>
+    <string name="option_1_2_weekly">1-2 veces por semana</string>
+    <string name="option_3_plus_weekly">3+ veces por semana</string>
+    <string name="option_no_meds">No tomo medicamentos</string>
+    <string name="option_bp_meds">Medicamentos para presión arterial</string>
+    <string name="option_pain_meds">Analgésicos/antiinflamatorios</string>
+    <string name="option_other_meds">Otros medicamentos</string>
+    <string name="option_none">Ninguna</string>
+    <string name="option_diabetes">Diabetes</string>
+    <string name="option_hypertension">Hipertensión</string>
+    <string name="option_autoimmune">Enfermedad autoinmune</string>
+
+    <!-- Advertencias y botones -->
+    <string name="important_reminder">Recordatorio Importante</string>
+    <string name="medical_disclaimer">Esta evaluación es solo para fines educativos e informativos. No reemplaza una consulta médica profesional. Si experimentas síntomas severos o persistentes, consulta inmediatamente a un médico.</string>
+    <string name="back">Atrás</string>
+    <string name="complete_survey">Completar Evaluación</string>
+
+    <!-- Perfil de usuario -->
+    <string name="user_profile">Perfil de Usuario</string>
+    <string name="profile">Perfil</string>
+    <string name="welcome_user">¡Bienvenido!</string>
+    <string name="user_name_placeholder">Nombre de Usuario</string>
+    <string name="user_email_placeholder">usuario@ejemplo.com</string>
+    <string name="birth_date_info">Fecha de nacimiento: No especificada</string>
+    <string name="phone_info">Teléfono: No especificado</string>
+    <string name="member_since_info">Miembro desde: Fecha de registro</string>
+    <string name="account_settings">Configuración de Cuenta</string>
+    <string name="edit_profile">Editar Perfil</string>
+    <string name="change_password">Cambiar Contraseña</string>
+    <string name="survey_results">Resultados de Encuesta</string>
+    <string name="logout">Cerrar Sesión</string>
+
+    <!-- Resultados de encuesta -->
+    <string name="survey_summary">Resumen de Evaluación</string>
+    <string name="survey_date_placeholder">Fecha: No hay evaluaciones previas</string>
+    <string name="risk_level_placeholder">Nivel de riesgo: No evaluado</string>
+    <string name="symptoms_analysis">Análisis de Síntomas</string>
+    <string name="habits_analysis">Análisis de Hábitos</string>
+    <string name="recommendations">Recomendaciones</string>
+    <string name="recommendations_placeholder">Completa una evaluación para recibir recomendaciones personalizadas.</string>
+    <string name="new_survey">Nueva Evaluación</string>
+    <string name="share_results">Compartir Resultados</string>
+
+    <!-- Análisis de síntomas -->
+    <string name="edema_analysis">Edema: No evaluado</string>
+    <string name="urine_analysis">Cambios en orina: No evaluado</string>
+    <string name="fatigue_analysis">Nivel de fatiga: No evaluado</string>
+    <string name="infections_analysis">Infecciones recientes: No evaluado</string>
+    <string name="blood_pressure_analysis">Presión arterial: No evaluada</string>
+
+    <!-- Análisis de hábitos -->
+    <string name="water_analysis">Consumo de agua: No evaluado</string>
+    <string name="salt_analysis">Consumo de sal: No evaluado</string>
+    <string name="exercise_analysis">Frecuencia de ejercicio: No evaluada</string>
+    <string name="medications_analysis">Medicamentos: No evaluado</string>
+    <string name="chronic_analysis">Condiciones crónicas: No evaluadas</string>
+
+    <!-- Configuración de tema -->
+    <string name="theme_settings">Configuración de Tema</string>
+    <string name="select_theme">Seleccionar Tema</string>
+    <string name="theme_light">Tema Claro</string>
+    <string name="theme_dark">Tema Oscuro</string>
+    <string name="theme_system">Seguir al Sistema</string>
+    <string name="theme_description">Elige la apariencia visual de la aplicación</string>
+    <string name="theme_changed">Tema cambiado correctamente</string>
+    <string name="restart_required">Reinicia la aplicación para aplicar los cambios</string>
+    <string name="go_to_menu">Ir al Menú Principal</string>
+</resources>

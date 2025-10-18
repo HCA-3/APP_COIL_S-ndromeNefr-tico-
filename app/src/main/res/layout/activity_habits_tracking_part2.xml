@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cosmos_blue"
+    tools:context=".HabitsTrackingPart2Activity">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/cosmos_blue"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:title="@string/habits_tracking"
+        app:titleTextColor="@color/white" />
+
+    <!-- Contenido principal -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Sección 3: Hábitos de Vida -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:text="@string/lifestyle_habits"
+                        android:textColor="@color/cosmos_blue"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <!-- Pregunta 6: Consumo de agua -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/q6_water_intake"
+                        android:textColor="@color/cosmos_blue"
+                        android:textSize="16sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_water"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rb_less_1l"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_less_1l"
+                            android:textColor="@color/cosmos_blue" />
+
+                        <RadioButton
+                            android:id="@+id/rb_1_2l"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_1_2l"
+                            android:textColor="@color/cosmos_blue" />
+
+                        <RadioButton
+                            android:id="@+id/rb_more_2l"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_more_2l"
+                            android:textColor="@color/cosmos_blue" />
+                    </RadioGroup>
+
+                    <!-- Pregunta 7: Consumo de sal -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/q7_salt_intake"
+                        android:textColor="@color/cosmos_blue"
+                        android:textSize="16sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_salt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rb_low_salt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_low"
+                            android:textColor="@color/cosmos_blue" />
+
+                        <RadioButton
+                            android:id="@+id/rb_moderate_salt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_moderate"
+                            android:textColor="@color/cosmos_blue" />
+
+                        <RadioButton
+                            android:id="@+id/rb_high_salt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_high"
+                            android:textColor="@color/cosmos_blue" />
+                    </RadioGroup>
+
+                    <!-- Pregunta 8: Ejercicio -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/q8_exercise"
+                        android:textColor="@color/cosmos_blue"
+                        android:textSize="16sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_exercise"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rb_never_exercise"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_never"
+                            android:textColor="@color/cosmos_blue" />
+
+                        <RadioButton
+                            android:id="@+id/rb_1_2_weekly"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_1_2_weekly"
+                            android:textColor="@color/cosmos_blue" />
+
+                        <RadioButton
+                            android:id="@+id/rb_3_plus_weekly"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_3_plus_weekly"
+                            android:textColor="@color/cosmos_blue" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Sección 4: Medicamentos y Condiciones -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:text="@string/medications_conditions"
+                        android:textColor="@color/cosmos_blue"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <!-- Pregunta 9: Medicamentos actuales -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/q9_medications"
+                        android:textColor="@color/cosmos_blue"
+                        android:textSize="16sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_medications"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rb_no_meds"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_no_meds"
+                            android:textColor="@color/cosmos_blue" />
+
+                        <RadioButton
+                            android:id="@+id/rb_bp_meds"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_bp_meds"
+                            android:textColor="@color/cosmos_blue" />
+
+                        <RadioButton
+                            android:id="@+id/rb_pain_meds"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_pain_meds"
+                            android:textColor="@color/cosmos_blue" />
+
+                        <RadioButton
+                            android:id="@+id/rb_other_meds"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_other_meds"
+                            android:textColor="@color/cosmos_blue" />
+                    </RadioGroup>
+
+                    <!-- Pregunta 10: Condiciones crónicas -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/q10_chronic_conditions"
+                        android:textColor="@color/cosmos_blue"
+                        android:textSize="16sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_chronic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rb_none_chronic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_none"
+                            android:textColor="@color/cosmos_blue" />
+
+                        <RadioButton
+                            android:id="@+id/rb_diabetes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_diabetes"
+                            android:textColor="@color/cosmos_blue" />
+
+                        <RadioButton
+                            android:id="@+id/rb_hypertension"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_hypertension"
+                            android:textColor="@color/cosmos_blue" />
+
+                        <RadioButton
+                            android:id="@+id/rb_autoimmune"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/option_autoimmune"
+                            android:textColor="@color/cosmos_blue" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Advertencia importante -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/light_gray"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/important_reminder"
+                        android:textColor="@color/cosmos_blue"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="2dp"
+                        android:text="@string/medical_disclaimer"
+                        android:textColor="@color/cosmos_blue"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Botones de acción -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_back"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="@color/blue_marble"
+                    android:text="@string/back"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_complete_survey"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:background="@color/varden"
+                    android:text="@string/complete_survey"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
