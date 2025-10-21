@@ -51,6 +51,18 @@
             </GhostTextMetaData>
           </value>
         </entry>
+        <entry key="acomoda lo del perfil que se pueda acceder, recuerda que se hace, un apartado para cambiar los datos del usuario y otro para ver los resultados de las encuestas y el historial de los reultados de las encuestas">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1761060144490" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
         <entry key="ahora la aplicaicon corre pero cuando entro al perfil se cierra la aplicaicon.&#10;y cuando termino de hacer la encuesta y le doy terminar encuesta sigo en la encuesta, corrige esto">
           <value>
             <GhostTextMetaData>
@@ -214,6 +226,18 @@
               <option name="timestamps">
                 <list>
                   <option value="1760737047729" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="en la parte superior se repiten dos veces el mismo titulo quiera el de abajo porque no esta funcionando">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1761059822809" />
                 </list>
               </option>
             </GhostTextMetaData>
