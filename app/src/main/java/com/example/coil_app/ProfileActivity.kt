@@ -73,6 +73,7 @@ class ProfileActivity : BaseActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
+        supportActionBar?.title = "Mi Perfil"
 
         toolbar.setNavigationOnClickListener {
             finish()

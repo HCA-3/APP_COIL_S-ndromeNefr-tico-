@@ -1,6 +1,7 @@
 package com.example.coil_app
 
 import android.os.Bundle
+import androidx.appcompat.widget.Toolbar
 
 
 class GlomerulonephritisInfoActivity : BaseActivity() {
@@ -10,8 +11,10 @@ class GlomerulonephritisInfoActivity : BaseActivity() {
         setContentView(R.layout.activity_glomerulonephritis_info)
 
         // Configurar toolbar
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        title = getString(R.string.postinfectious_glomerulonephritis)
+        supportActionBar?.title = getString(R.string.postinfectious_glomerulonephritis)
     }
 
     override fun onSupportNavigateUp(): Boolean {

@@ -18,7 +18,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="?attr/homeAsUpIndicator"
-        app:title="@string/postinfectious_glomerulonephritis"
         app:titleTextColor="@color/white" />
 
     <!-- Contenido principal -->

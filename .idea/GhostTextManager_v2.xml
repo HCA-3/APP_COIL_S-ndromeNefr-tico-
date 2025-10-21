@@ -75,6 +75,18 @@
             </GhostTextMetaData>
           </value>
         </entry>
+        <entry key="cambia los textos a negros">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1761059140996" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
         <entry key="como vas">
           <value>
             <GhostTextMetaData>
@@ -375,6 +387,18 @@
             </GhostTextMetaData>
           </value>
         </entry>
+        <entry key="quiero que hagas los siguientes cambios: los colores principales deben de ser estos:&#10;Gochujang Red: #780000&#10;Crimson Blaze: #C1121F&#10;Varden: #AE1F23">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1761056896477" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
         <entry key="quiero que le agregues a perfil de usuario que tipo de iliminacion quiere si la clara, la oscura o la del sistema y se pueda ajustar a esto">
           <value>
             <GhostTextMetaData>
@@ -459,6 +483,18 @@
             </GhostTextMetaData>
           </value>
         </entry>
+        <entry key="tenemos que  corregir ciertas cosas, primero hice la encuesta y lo que aparece despues de terminarla es que me envia al menu nuevamente, lo que quiero es que me muestres los resultados y como esta el estado de esa persona que resuelve la encuesta">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1761057313846" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
         <entry key="tengo estos problemas:&#10;9 Build Coil_app: failed At 17/10/2025 6:51 p. m. with 6 errors&#10;₺ Download info&#10;0 :app:mergeDebugResources 5 errors&#10;&lt;/&gt; styles.xml app\src\main\res\values 2 errors&#10;Duplicate resources&#10;9 Duplicate resources&#10;&lt;/&gt; themes.xml app\src\main\res\values 2 errors&#10;[style/Theme.Coil_app] C:\Users\dsant\AndroidStudioProjects\Coil_app\app\src\main\res\values\styles.xml[style,&#10;:app:packageDebugResources">
           <value>
             <GhostTextMetaData>
@@ -526,6 +562,30 @@
               <option name="timestamps">
                 <list>
                   <option value="1760710371467" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="y ayudame a corregir el error que se tiene cuando se entra al perfin que no tengo acceso">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1761057707653" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="y quiero que el fondo de la aplicacion el que esta en azul se cambie a: Varden: #AE1F23">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1761057894218" />
                 </list>
               </option>
             </GhostTextMetaData>
