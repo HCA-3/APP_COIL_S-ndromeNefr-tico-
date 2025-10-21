@@ -83,7 +83,11 @@ class SurveyResultsActivity : BaseActivity() {
     private fun loadSurveyResults() {
         val surveyDataJson = sharedPreferences.getString("lastSurveyData", null)
 
+        android.util.Log.d("SurveyResultsActivity", "Cargando datos de encuesta...")
+        android.util.Log.d("SurveyResultsActivity", "Datos encontrados: ${surveyDataJson ?: "null"}")
+
         if (surveyDataJson == null) {
+            android.util.Log.w("SurveyResultsActivity", "No hay datos de encuesta disponibles")
             showNoDataMessage()
             return
         }
@@ -92,12 +96,17 @@ class SurveyResultsActivity : BaseActivity() {
             val surveyData = JSONObject(surveyDataJson)
             val surveyDateStr = surveyData.getString("date")
 
+            android.util.Log.d("SurveyResultsActivity", "Fecha de encuesta: $surveyDateStr")
+            android.util.Log.d("SurveyResultsActivity", "Datos JSON: $surveyDataJson")
+
             surveyDate.text = "Fecha: $surveyDateStr"
 
             // Analizar respuestas y generar resultados
             analyzeSurveyResults(surveyData)
 
         } catch (e: Exception) {
+            android.util.Log.e("SurveyResultsActivity", "Error procesando datos de encuesta: ${e.message}")
+            e.printStackTrace()
             showNoDataMessage()
         }
     }

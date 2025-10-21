@@ -45,10 +45,6 @@
             android:exported="false"
             android:parentActivityName=".HomeActivity" />
         <activity
-            android:name=".HabitsTrackingPart2Activity"
-            android:exported="false"
-            android:parentActivityName=".HabitsTrackingActivity" />
-        <activity
             android:name=".ProfileActivity"
             android:exported="false"
             android:parentActivityName=".HomeActivity" />

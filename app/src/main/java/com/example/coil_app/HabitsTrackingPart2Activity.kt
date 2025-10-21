@@ -67,23 +67,39 @@ class HabitsTrackingPart2Activity : BaseActivity() {
         val prefs = getSharedPreferences("SurveyAnswers", MODE_PRIVATE)
         val editor = prefs.edit()
 
-        // Guardar IDs de radio buttons para referencia
-        editor.putInt("water", rgWater.checkedRadioButtonId)
-        editor.putInt("salt", rgSalt.checkedRadioButtonId)
-        editor.putInt("exercise", rgExercise.checkedRadioButtonId)
-        editor.putInt("medications", rgMedications.checkedRadioButtonId)
-        editor.putInt("chronic", rgChronic.checkedRadioButtonId)
+        try {
+            // Guardar IDs de radio buttons para referencia
+            editor.putInt("water", rgWater.checkedRadioButtonId)
+            editor.putInt("salt", rgSalt.checkedRadioButtonId)
+            editor.putInt("exercise", rgExercise.checkedRadioButtonId)
+            editor.putInt("medications", rgMedications.checkedRadioButtonId)
+            editor.putInt("chronic", rgChronic.checkedRadioButtonId)
 
-        // Guardar respuestas como texto para fácil acceso
-        editor.putString("q6_water_intake", getRadioText(rgWater.checkedRadioButtonId))
-        editor.putString("q7_salt_intake", getRadioText(rgSalt.checkedRadioButtonId))
-        editor.putString("q8_exercise", getRadioText(rgExercise.checkedRadioButtonId))
-        editor.putString("q9_medications", getRadioText(rgMedications.checkedRadioButtonId))
-        editor.putString("q10_chronic_conditions", getRadioText(rgChronic.checkedRadioButtonId))
+            // Guardar respuestas como texto para fácil acceso
+            val waterText = getRadioText(rgWater.checkedRadioButtonId)
+            val saltText = getRadioText(rgSalt.checkedRadioButtonId)
+            val exerciseText = getRadioText(rgExercise.checkedRadioButtonId)
+            val medicationsText = getRadioText(rgMedications.checkedRadioButtonId)
+            val chronicText = getRadioText(rgChronic.checkedRadioButtonId)
 
-        editor.putLong("completedAt", System.currentTimeMillis())
+            editor.putString("q6_water_intake", waterText)
+            editor.putString("q7_salt_intake", saltText)
+            editor.putString("q8_exercise", exerciseText)
+            editor.putString("q9_medications", medicationsText)
+            editor.putString("q10_chronic_conditions", chronicText)
 
-        editor.apply()
+            editor.putLong("completedAt", System.currentTimeMillis())
+
+            android.util.Log.d("HabitsTrackingPart2", "Guardando Parte 2 - Agua: $waterText, Sal: $saltText, Ejercicio: $exerciseText")
+
+            // Usar commit() para asegurar guardado inmediato
+            val success = editor.commit()
+            android.util.Log.d("HabitsTrackingPart2", "Datos Parte 2 guardados exitosamente: $success")
+
+        } catch (e: Exception) {
+            android.util.Log.e("HabitsTrackingPart2", "Error guardando Parte 2: ${e.message}")
+            e.printStackTrace()
+        }
     }
 
     private fun getRadioText(checkedId: Int): String {
@@ -120,62 +136,95 @@ class HabitsTrackingPart2Activity : BaseActivity() {
     }
 
     private fun completeSurvey() {
-        // Guardar datos completos de la encuesta en formato JSON
-        saveCompleteSurveyData()
+        try {
+            // Guardar datos completos de la encuesta en formato JSON
+            saveCompleteSurveyData()
 
-        Toast.makeText(this, "Evaluación completada exitosamente", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Evaluación completada exitosamente", Toast.LENGTH_LONG).show()
 
-        // Ir a la pantalla de resultados
-        val intent = Intent(this, SurveyResultsActivity::class.java)
-        startActivity(intent)
-        finish()
+            // Pequeña pausa para asegurar que los datos se guarden completamente
+            android.os.Handler(android.os.Looper.getMainLooper()).postDelayed({
+                try {
+                    android.util.Log.d("HabitsTrackingPart2", "Iniciando navegación a SurveyResultsActivity")
+
+                    // Ir a la pantalla de resultados
+                    val intent = Intent(this, SurveyResultsActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+                    startActivity(intent)
+
+                    android.util.Log.d("HabitsTrackingPart2", "Navegación iniciada correctamente")
+                    finish()
+
+                } catch (e: Exception) {
+                    android.util.Log.e("HabitsTrackingPart2", "Error en navegación: ${e.message}")
+                    e.printStackTrace()
+                    Toast.makeText(this, "Error al mostrar resultados. Intenta nuevamente.", Toast.LENGTH_SHORT).show()
+                }
+            }, 500) // 500ms de retraso para asegurar guardado completo
+
+        } catch (e: Exception) {
+            android.util.Log.e("HabitsTrackingPart2", "Error completando encuesta: ${e.message}")
+            e.printStackTrace()
+            Toast.makeText(this, "Error al completar la evaluación. Intenta nuevamente.", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun saveCompleteSurveyData() {
         val prefs = getSharedPreferences("SurveyAnswers", MODE_PRIVATE)
         val userPrefs = getSharedPreferences("UserPrefs", MODE_PRIVATE)
 
-        // Crear objeto JSON con todas las respuestas
-        val surveyData = org.json.JSONObject().apply {
-            put("date", java.text.SimpleDateFormat("dd/MM/yyyy HH:mm", java.util.Locale.getDefault())
-                .format(java.util.Date()))
+        try {
+            // Crear objeto JSON con todas las respuestas
+            val surveyData = org.json.JSONObject().apply {
+                put("date", java.text.SimpleDateFormat("dd/MM/yyyy HH:mm", java.util.Locale.getDefault())
+                    .format(java.util.Date()))
 
-            // Respuestas de la parte 1
-            put("q1_edema", prefs.getString("q1_edema", "No respondido"))
-            put("q2_urine", prefs.getString("q2_urine", "No respondido"))
-            put("q3_fatigue", prefs.getString("q3_fatigue", "No respondido"))
-            put("q4_recent_infections", prefs.getString("q4_recent_infections", "No respondido"))
-            put("q5_blood_pressure", prefs.getString("q5_blood_pressure", "No respondido"))
+                // Respuestas de la parte 1
+                put("q1_edema", prefs.getString("q1_edema", "No respondido"))
+                put("q2_urine", prefs.getString("q2_urine", "No respondido"))
+                put("q3_fatigue", prefs.getString("q3_fatigue", "No respondido"))
+                put("q4_recent_infections", prefs.getString("q4_recent_infections", "No respondido"))
+                put("q5_blood_pressure", prefs.getString("q5_blood_pressure", "No respondido"))
 
-            // Respuestas de la parte 2
-            put("q6_water_intake", prefs.getString("q6_water_intake", "No respondido"))
-            put("q7_salt_intake", prefs.getString("q7_salt_intake", "No respondido"))
-            put("q8_exercise", prefs.getString("q8_exercise", "No respondido"))
-            put("q9_medications", prefs.getString("q9_medications", "No respondido"))
-            put("q10_chronic_conditions", prefs.getString("q10_chronic_conditions", "No respondido"))
+                // Respuestas de la parte 2
+                put("q6_water_intake", prefs.getString("q6_water_intake", "No respondido"))
+                put("q7_salt_intake", prefs.getString("q7_salt_intake", "No respondido"))
+                put("q8_exercise", prefs.getString("q8_exercise", "No respondido"))
+                put("q9_medications", prefs.getString("q9_medications", "No respondido"))
+                put("q10_chronic_conditions", prefs.getString("q10_chronic_conditions", "No respondido"))
 
-            put("completedAt", prefs.getLong("completedAt", System.currentTimeMillis()))
+                put("completedAt", prefs.getLong("completedAt", System.currentTimeMillis()))
+            }
+
+            val surveyDataString = surveyData.toString()
+            android.util.Log.d("HabitsTrackingPart2", "Guardando datos de encuesta: $surveyDataString")
+
+            // Guardar en UserPrefs para que SurveyResultsActivity pueda acceder
+            val editor = userPrefs.edit()
+            editor.putString("lastSurveyData", surveyDataString)
+
+            // Guardar en historial de encuestas
+            val surveyHistory = userPrefs.getStringSet("surveyHistory", mutableSetOf())?.toMutableSet() ?: mutableSetOf()
+            surveyHistory.add(surveyDataString)
+
+            // Limitar el historial a las últimas 50 evaluaciones para no sobrecargar el almacenamiento
+            if (surveyHistory.size > 50) {
+                val sortedHistory: List<String> = surveyHistory.map { JSONObject(it) }
+                    .sortedByDescending { it.optLong("completedAt", 0L) }
+                    .take(50)
+                    .map { it.toString() }
+                editor.putStringSet("surveyHistory", sortedHistory.toMutableSet())
+            } else {
+                editor.putStringSet("surveyHistory", surveyHistory)
+            }
+
+            // Usar commit() en lugar de apply() para asegurar que los datos se guarden inmediatamente
+            val success = editor.commit()
+            android.util.Log.d("HabitsTrackingPart2", "Datos guardados exitosamente: $success")
+
+        } catch (e: Exception) {
+            android.util.Log.e("HabitsTrackingPart2", "Error guardando datos de encuesta: ${e.message}")
+            e.printStackTrace()
         }
-
-        // Guardar en UserPrefs para que SurveyResultsActivity pueda acceder
-        val editor = userPrefs.edit()
-        editor.putString("lastSurveyData", surveyData.toString())
-
-        // Guardar en historial de encuestas
-        val surveyHistory = userPrefs.getStringSet("surveyHistory", mutableSetOf())?.toMutableSet() ?: mutableSetOf()
-        surveyHistory.add(surveyData.toString())
-
-        // Limitar el historial a las últimas 50 evaluaciones para no sobrecargar el almacenamiento
-        if (surveyHistory.size > 50) {
-            val sortedHistory: List<String> = surveyHistory.map { JSONObject(it) }
-                .sortedByDescending { it.optLong("completedAt", 0L) }
-                .take(50)
-                .map { it.toString() }
-            editor.putStringSet("surveyHistory", sortedHistory.toMutableSet())
-        } else {
-            editor.putStringSet("surveyHistory", surveyHistory)
-        }
-
-        editor.apply()
     }
 }
