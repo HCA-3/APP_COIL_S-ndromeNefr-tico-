@@ -138,6 +138,9 @@ class SurveyResultsActivity : BaseActivity() {
 
         // Generar recomendaciones
         generateRecommendations(surveyData, riskScore)
+
+        // Mostrar estado general de la persona
+        showGeneralStatus(surveyData, riskScore)
     }
 
     private fun calculateRiskScore(surveyData: JSONObject): Int {
@@ -201,6 +204,50 @@ class SurveyResultsActivity : BaseActivity() {
         chronicResult.text = "Condiciones crónicas: $chronic"
     }
 
+    private fun showGeneralStatus(surveyData: JSONObject, riskScore: Int) {
+        val statusDescription = when {
+            riskScore >= 8 -> "⚠️ ESTADO CRÍTICO\n\nTu evaluación indica un nivel de riesgo ALTO para problemas renales. Se recomienda buscar atención médica URGENTE. Los síntomas reportados sugieren posible afectación renal significativa que requiere evaluación inmediata."
+
+            riskScore >= 5 -> "⚠️ ESTADO DE ALERTA\n\nTu evaluación muestra un nivel de riesgo MODERADO. Se recomienda consultar a un médico lo antes posible. Algunos síntomas podrían indicar problemas renales que requieren supervisión médica."
+
+            riskScore >= 2 -> "✅ ESTADO PRECAUTORIO\n\nTu evaluación muestra un nivel de riesgo BAJO. Aunque no hay signos alarmantes, se recomienda mantener un seguimiento regular y adoptar hábitos saludables para proteger tus riñones."
+
+            else -> "✅ ESTADO SALUDABLE\n\nTu evaluación indica un nivel de riesgo MÍNIMO. Tus síntomas y hábitos actuales no sugieren problemas renales significativos. Continúa con tus buenos hábitos de salud."
+        }
+
+        // Añadir información específica basada en los síntomas
+        val specificInfo = mutableListOf<String>()
+
+        val edema = surveyData.optString("q1_edema")
+        if (edema != "No") {
+            specificInfo.add("• Edema detectado: $edema - Este síntoma puede indicar retención de líquidos")
+        }
+
+        val urine = surveyData.optString("q2_urine")
+        if (urine != "Normal") {
+            specificInfo.add("• Cambios en orina: $urine - Esto requiere atención médica")
+        }
+
+        val fatigue = surveyData.optString("q3_fatigue")
+        if (fatigue == "Severo/a") {
+            specificInfo.add("• Fatiga severa reportada - Puede ser signo de problemas sistémicos")
+        }
+
+        val bp = surveyData.optString("q5_blood_pressure")
+        if (bp == "Alta") {
+            specificInfo.add("• Presión arterial alta - Factor de riesgo renal importante")
+        }
+
+        val fullStatus = if (specificInfo.isNotEmpty()) {
+            "$statusDescription\n\n\n📋 OBSERVACIONES ESPECÍFICAS:\n${specificInfo.joinToString("\n")}"
+        } else {
+            statusDescription
+        }
+
+        // Guardar el estado general para mostrarlo después de generar recomendaciones
+        sharedPreferences.edit().putString("generalStatus", fullStatus).apply()
+    }
+
     private fun generateRecommendations(surveyData: JSONObject, riskScore: Int) {
         val recommendations = mutableListOf<String>()
 
@@ -260,7 +307,16 @@ class SurveyResultsActivity : BaseActivity() {
             }
         }
 
-        recommendationsText.text = recommendations.joinToString("\n")
+        // Obtener el estado general guardado
+        val generalStatus = sharedPreferences.getString("generalStatus", "")
+
+        val fullRecommendations = if (!generalStatus.isNullOrEmpty()) {
+            "$generalStatus\n\n\n💡 RECOMENDACIONES:\n${recommendations.joinToString("\n")}"
+        } else {
+            recommendations.joinToString("\n")
+        }
+
+        recommendationsText.text = fullRecommendations
     }
 
     private fun showNoDataMessage() {

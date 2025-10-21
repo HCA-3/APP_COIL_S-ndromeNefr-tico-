@@ -88,7 +88,7 @@ class HabitsTrackingActivity : BaseActivity() {
 
                     // Ir a la pantalla de resultados
                     val intent = Intent(this, SurveyResultsActivity::class.java)
-                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
                     startActivity(intent)
 
                     android.util.Log.d("HabitsTracking", "Navegación iniciada correctamente")
@@ -98,6 +98,11 @@ class HabitsTrackingActivity : BaseActivity() {
                     android.util.Log.e("HabitsTracking", "Error en navegación: ${e.message}")
                     e.printStackTrace()
                     Toast.makeText(this, "Error al mostrar resultados. Intenta nuevamente.", Toast.LENGTH_SHORT).show()
+                    // En caso de error, ir al menú principal como fallback
+                    val fallbackIntent = Intent(this, HomeActivity::class.java)
+                    fallbackIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+                    startActivity(fallbackIntent)
+                    finish()
                 }
             }, 500) // 500ms de retraso para asegurar guardado completo
 

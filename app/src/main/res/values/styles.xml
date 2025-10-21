@@ -17,9 +17,9 @@
 
         <!-- Customize your theme here. -->
         <item name="colorSurface">@color/white</item>
-        <item name="colorOnSurface">@color/gochujang_red</item>
-        <item name="android:colorBackground">@color/white</item>
-        <item name="android:colorForeground">@color/gochujang_red</item>
+        <item name="colorOnSurface">@color/black</item>
+        <item name="android:colorBackground">@color/varden</item>
+        <item name="android:colorForeground">@color/black</item>
     </style>
 
     <!-- Tema claro -->
@@ -31,9 +31,9 @@
         <item name="colorSecondaryVariant">@color/cosmos_blue</item>
         <item name="colorOnSecondary">@color/white</item>
         <item name="colorSurface">@color/white</item>
-        <item name="colorOnSurface">@color/gochujang_red</item>
-        <item name="android:colorBackground">@color/white</item>
-        <item name="android:colorForeground">@color/gochujang_red</item>
+        <item name="colorOnSurface">@color/black</item>
+        <item name="android:colorBackground">@color/varden</item>
+        <item name="android:colorForeground">@color/black</item>
     </style>
 
     <!-- Tema oscuro -->

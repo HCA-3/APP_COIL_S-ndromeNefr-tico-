@@ -33,9 +33,20 @@ class ProfileActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_profile)
 
         sharedPreferences = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
+
+        // Verificar si el usuario está logueado
+        if (!sharedPreferences.getBoolean("isLoggedIn", false)) {
+            // Si no está logueado, redirigir al login
+            val intent = Intent(this, LoginActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+            finish()
+            return
+        }
+
+        setContentView(R.layout.activity_profile)
 
         initViews()
         setupToolbar()
@@ -69,57 +80,84 @@ class ProfileActivity : BaseActivity() {
     }
 
     private fun loadUserData() {
-        val userName = sharedPreferences.getString("userName", "Usuario")
-        val userEmail = sharedPreferences.getString("userEmail", "usuario@ejemplo.com")
-        val userBirthDate = sharedPreferences.getString("userBirthDate", "")
-        val userPhone = sharedPreferences.getString("userPhone", "")
-        val registrationDate = sharedPreferences.getString("registrationDate", "")
+        try {
+            val userName = sharedPreferences.getString("userName", "Usuario")
+            val userEmail = sharedPreferences.getString("userEmail", "usuario@ejemplo.com")
+            val userBirthDate = sharedPreferences.getString("userBirthDate", "")
+            val userPhone = sharedPreferences.getString("userPhone", "")
+            val registrationDate = sharedPreferences.getString("registrationDate", "")
 
-        profileName.text = userName
-        profileEmail.text = userEmail
+            profileName.text = userName ?: "Usuario"
+            profileEmail.text = userEmail ?: "usuario@ejemplo.com"
 
-        if (userBirthDate.isNullOrEmpty()) {
+            if (userBirthDate.isNullOrEmpty()) {
+                profileBirthDate.text = getString(R.string.birth_date_info)
+            } else {
+                profileBirthDate.text = "Fecha de nacimiento: $userBirthDate"
+            }
+
+            if (userPhone.isNullOrEmpty()) {
+                profilePhone.text = getString(R.string.phone_info)
+            } else {
+                profilePhone.text = "Teléfono: $userPhone"
+            }
+
+            if (registrationDate.isNullOrEmpty()) {
+                profileMemberSince.text = getString(R.string.member_since_info)
+            } else {
+                profileMemberSince.text = "Miembro desde: $registrationDate"
+            }
+        } catch (e: Exception) {
+            android.util.Log.e("ProfileActivity", "Error cargando datos del usuario: ${e.message}")
+            Toast.makeText(this, "Error al cargar los datos del perfil", Toast.LENGTH_SHORT).show()
+
+            // Establecer valores por defecto en caso de error
+            profileName.text = "Usuario"
+            profileEmail.text = "usuario@ejemplo.com"
             profileBirthDate.text = getString(R.string.birth_date_info)
-        } else {
-            profileBirthDate.text = "Fecha de nacimiento: $userBirthDate"
-        }
-
-        if (userPhone.isNullOrEmpty()) {
             profilePhone.text = getString(R.string.phone_info)
-        } else {
-            profilePhone.text = "Teléfono: $userPhone"
-        }
-
-        if (registrationDate.isNullOrEmpty()) {
             profileMemberSince.text = getString(R.string.member_since_info)
-        } else {
-            profileMemberSince.text = "Miembro desde: $registrationDate"
         }
     }
 
     private fun setupClickListeners() {
-        optionEditProfile.setOnClickListener {
-            showEditProfileDialog()
-        }
+        try {
+            optionEditProfile.setOnClickListener {
+                showEditProfileDialog()
+            }
 
-        optionChangePassword.setOnClickListener {
-            showChangePasswordDialog()
-        }
+            optionChangePassword.setOnClickListener {
+                showChangePasswordDialog()
+            }
 
-        optionThemeSettings.setOnClickListener {
-            showThemeSelectorDialog()
-        }
+            optionThemeSettings.setOnClickListener {
+                showThemeSelectorDialog()
+            }
 
-        optionSurveyResults.setOnClickListener {
-            startActivity(Intent(this, SurveyResultsActivity::class.java))
-        }
+            optionSurveyResults.setOnClickListener {
+                try {
+                    startActivity(Intent(this, SurveyResultsActivity::class.java))
+                } catch (e: Exception) {
+                    android.util.Log.e("ProfileActivity", "Error abriendo resultados: ${e.message}")
+                    Toast.makeText(this, "Error al abrir resultados", Toast.LENGTH_SHORT).show()
+                }
+            }
 
-        optionSurveyHistory.setOnClickListener {
-            startActivity(Intent(this, SurveyHistoryActivity::class.java))
-        }
+            optionSurveyHistory.setOnClickListener {
+                try {
+                    startActivity(Intent(this, SurveyHistoryActivity::class.java))
+                } catch (e: Exception) {
+                    android.util.Log.e("ProfileActivity", "Error abriendo historial: ${e.message}")
+                    Toast.makeText(this, "Error al abrir historial", Toast.LENGTH_SHORT).show()
+                }
+            }
 
-        btnLogout.setOnClickListener {
-            showLogoutConfirmationDialog()
+            btnLogout.setOnClickListener {
+                showLogoutConfirmationDialog()
+            }
+        } catch (e: Exception) {
+            android.util.Log.e("ProfileActivity", "Error configurando listeners: ${e.message}")
+            Toast.makeText(this, "Error al configurar el perfil", Toast.LENGTH_SHORT).show()
         }
     }
 

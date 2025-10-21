@@ -21,9 +21,20 @@ class HomeActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
 
         sharedPreferences = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
+
+        // Verificar si el usuario está logueado
+        if (!sharedPreferences.getBoolean("isLoggedIn", false)) {
+            // Si no está logueado, redirigir al login
+            val intent = Intent(this, LoginActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+            finish()
+            return
+        }
+
+        setContentView(R.layout.activity_home)
 
         initViews()
         loadUserData()
