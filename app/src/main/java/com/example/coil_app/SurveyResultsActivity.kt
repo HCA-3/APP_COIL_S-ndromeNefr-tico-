@@ -139,9 +139,9 @@ class SurveyResultsActivity : BaseActivity() {
         if (surveyData.optString("q1_edema") == "Moderado/a") score += 2
         if (surveyData.optString("q1_edema") == "Severo/a") score += 3
 
-        if (surveyData.optString("q2_urine_changes") == "Orina oscura/color té") score += 2
-        if (surveyData.optString("q2_urine_changes") == "Con sangre") score += 3
-        if (surveyData.optString("q2_urine_changes") == "Espumosa") score += 2
+        if (surveyData.optString("q2_urine") == "Orina oscura/color té") score += 2
+        if (surveyData.optString("q2_urine") == "Con sangre") score += 3
+        if (surveyData.optString("q2_urine") == "Espumosa") score += 2
 
         if (surveyData.optString("q3_fatigue") == "Moderado/a") score += 1
         if (surveyData.optString("q3_fatigue") == "Severo/a") score += 2
@@ -162,7 +162,7 @@ class SurveyResultsActivity : BaseActivity() {
         val edema = surveyData.optString("q1_edema", "No evaluado")
         edemaResult.text = "Edema: $edema"
 
-        val urineChanges = surveyData.optString("q2_urine_changes", "No evaluado")
+        val urineChanges = surveyData.optString("q2_urine", "No evaluado")
         urineResult.text = "Cambios en orina: $urineChanges"
 
         val fatigue = surveyData.optString("q3_fatigue", "No evaluado")
@@ -200,7 +200,7 @@ class SurveyResultsActivity : BaseActivity() {
             recommendations.add("• Consulta a un médico sobre el edema (hinchazón) lo antes posible")
         }
 
-        if (surveyData.optString("q2_urine_changes") != "No") {
+        if (surveyData.optString("q2_urine") != "No") {
             recommendations.add("• Los cambios en el color o apariencia de la orina requieren evaluación médica")
         }
 

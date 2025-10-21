@@ -24,6 +24,7 @@ class ProfileActivity : BaseActivity() {
     private lateinit var profileMemberSince: TextView
     private lateinit var optionEditProfile: LinearLayout
     private lateinit var optionChangePassword: LinearLayout
+    private lateinit var optionThemeSettings: LinearLayout
     private lateinit var optionSurveyResults: LinearLayout
     private lateinit var optionSurveyHistory: LinearLayout
     private lateinit var btnLogout: AppCompatButton
@@ -51,6 +52,7 @@ class ProfileActivity : BaseActivity() {
         profileMemberSince = findViewById(R.id.profile_member_since)
         optionEditProfile = findViewById(R.id.option_edit_profile)
         optionChangePassword = findViewById(R.id.option_change_password)
+        optionThemeSettings = findViewById(R.id.option_theme_settings)
         optionSurveyResults = findViewById(R.id.option_survey_results)
         optionSurveyHistory = findViewById(R.id.option_survey_history)
         btnLogout = findViewById(R.id.btn_logout)
@@ -102,6 +104,10 @@ class ProfileActivity : BaseActivity() {
 
         optionChangePassword.setOnClickListener {
             showChangePasswordDialog()
+        }
+
+        optionThemeSettings.setOnClickListener {
+            showThemeSelectorDialog()
         }
 
         optionSurveyResults.setOnClickListener {
@@ -233,5 +239,67 @@ class ProfileActivity : BaseActivity() {
             }
             .setNegativeButton("No", null)
             .show()
+    }
+
+    private fun showThemeSelectorDialog() {
+        val dialogView = layoutInflater.inflate(R.layout.dialog_theme_selector, null)
+
+        val optionLightTheme = dialogView.findViewById<LinearLayout>(R.id.option_light_theme)
+        val optionDarkTheme = dialogView.findViewById<LinearLayout>(R.id.option_dark_theme)
+        val optionSystemTheme = dialogView.findViewById<LinearLayout>(R.id.option_system_theme)
+
+        val rbLightTheme = dialogView.findViewById<android.widget.RadioButton>(R.id.rb_light_theme)
+        val rbDarkTheme = dialogView.findViewById<android.widget.RadioButton>(R.id.rb_dark_theme)
+        val rbSystemTheme = dialogView.findViewById<android.widget.RadioButton>(R.id.rb_system_theme)
+
+        val themeManager = ThemeManager(this)
+        val currentTheme = themeManager.getSavedTheme()
+
+        // Marcar el tema actual
+        when (currentTheme) {
+            ThemeManager.THEME_LIGHT -> rbLightTheme.isChecked = true
+            ThemeManager.THEME_DARK -> rbDarkTheme.isChecked = true
+            ThemeManager.THEME_SYSTEM -> rbSystemTheme.isChecked = true
+        }
+
+        val dialog = androidx.appcompat.app.AlertDialog.Builder(this)
+            .setTitle(getString(R.string.theme_settings))
+            .setView(dialogView)
+            .setPositiveButton("Aceptar") { _, _ ->
+                val selectedTheme = when {
+                    rbLightTheme.isChecked -> ThemeManager.THEME_LIGHT
+                    rbDarkTheme.isChecked -> ThemeManager.THEME_DARK
+                    rbSystemTheme.isChecked -> ThemeManager.THEME_SYSTEM
+                    else -> currentTheme
+                }
+
+                themeManager.saveTheme(selectedTheme)
+                themeManager.applyTheme(selectedTheme)
+
+                Toast.makeText(this, getString(R.string.theme_changed), Toast.LENGTH_SHORT).show()
+            }
+            .setNegativeButton("Cancelar", null)
+            .create()
+
+        dialog.show()
+
+        // Configurar clics en las opciones
+        optionLightTheme.setOnClickListener {
+            rbLightTheme.isChecked = true
+            rbDarkTheme.isChecked = false
+            rbSystemTheme.isChecked = false
+        }
+
+        optionDarkTheme.setOnClickListener {
+            rbLightTheme.isChecked = false
+            rbDarkTheme.isChecked = true
+            rbSystemTheme.isChecked = false
+        }
+
+        optionSystemTheme.setOnClickListener {
+            rbLightTheme.isChecked = false
+            rbDarkTheme.isChecked = false
+            rbSystemTheme.isChecked = true
+        }
     }
 }

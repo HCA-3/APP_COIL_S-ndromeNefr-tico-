@@ -182,4 +182,8 @@
     <string name="theme_changed">Tema cambiado correctamente</string>
     <string name="restart_required">Reinicia la aplicación para aplicar los cambios</string>
     <string name="go_to_menu">Ir al Menú Principal</string>
+    <string name="survey_history">Historial de Evaluaciones</string>
+    <string name="view_history">Ver Historial</string>
+    <string name="no_surveys_available">No hay evaluaciones disponibles</string>
+    <string name="survey_completed_at">Completada el</string>
 </resources>

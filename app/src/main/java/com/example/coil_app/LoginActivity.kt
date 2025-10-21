@@ -112,44 +112,6 @@ class LoginActivity : BaseActivity() {
     }
 
     private fun loginUser() {
-        // COMENTADO TEMPORALMENTE - Deshabilitar login para probar otras funcionalidades
-        /*
-        progressBar.visibility = ProgressBar.VISIBLE
-        btnLogin.isEnabled = false
-
-        val email = etEmail.text.toString().trim()
-        val password = etPassword.text.toString()
-
-        auth.signInWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    // Login exitoso
-                    progressBar.visibility = ProgressBar.GONE
-                    btnLogin.isEnabled = true
-                    Toast.makeText(
-                        baseContext,
-                        getString(R.string.login_success),
-                        Toast.LENGTH_SHORT
-                    ).show()
-
-                    // Ir a la pantalla principal
-                    val intent = Intent(this, HomeActivity::class.java)
-                    startActivity(intent)
-                    finish()
-                } else {
-                    // Error en el login
-                    progressBar.visibility = ProgressBar.GONE
-                    btnLogin.isEnabled = true
-                    Toast.makeText(
-                        baseContext,
-                        getString(R.string.error_login_failed),
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
-            }
-        */
-
-        // TEMPORAL: Login local para probar funcionalidades
         val email = etEmail.text.toString().trim()
         val password = etPassword.text.toString()
 
@@ -158,6 +120,7 @@ class LoginActivity : BaseActivity() {
             val sharedPreferences = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
             val editor = sharedPreferences.edit()
             editor.putBoolean("isLoggedIn", true)
+            editor.putString("lastLoginTime", java.text.SimpleDateFormat("dd/MM/yyyy HH:mm", java.util.Locale.getDefault()).format(java.util.Date()))
             editor.apply()
 
             Toast.makeText(this, getString(R.string.login_success), Toast.LENGTH_SHORT).show()
@@ -168,6 +131,8 @@ class LoginActivity : BaseActivity() {
             finish()
         } else {
             // Error en el login
+            etEmail.error = "Credenciales incorrectas"
+            etPassword.error = "Credenciales incorrectas"
             Toast.makeText(this, getString(R.string.error_login_failed), Toast.LENGTH_SHORT).show()
         }
     }

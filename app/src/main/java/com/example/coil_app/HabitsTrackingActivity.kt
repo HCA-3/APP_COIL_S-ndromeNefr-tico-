@@ -78,36 +78,35 @@ class HabitsTrackingActivity : BaseActivity() {
     }
 
     private fun getRadioText(checkedId: Int): String {
-        // Temporal: mapeo basado en posición hasta que los IDs se generen correctamente
         return when (checkedId) {
-            // Edema (primer RadioGroup)
-            2131296344 -> "No"         // rb_no_edema
-            2131296345 -> "Leve"       // rb_mild_edema
-            2131296346 -> "Moderado/a"  // rb_moderate_edema
-            2131296347 -> "Severo/a"    // rb_severe_edema
+            // Edema
+            R.id.rb_no_edema -> "No"
+            R.id.rb_mild_edema -> "Leve"
+            R.id.rb_moderate_edema -> "Moderado/a"
+            R.id.rb_severe_edema -> "Severo/a"
 
-            // Orina (segundo RadioGroup)
-            2131296348 -> "Normal"                    // rb_normal_urine
-            2131296349 -> "Orina oscura/color té"     // rb_dark_urine
-            2131296350 -> "Con sangre"                // rb_bloody
-            2131296351 -> "Espumosa"                  // rb_foamy
+            // Orina
+            R.id.rb_normal_urine -> "Normal"
+            R.id.rb_dark_urine -> "Orina oscura/color té"
+            R.id.rb_bloody -> "Con sangre"
+            R.id.rb_foamy -> "Espumosa"
 
-            // Fatiga (tercer RadioGroup)
-            2131296352 -> "No"         // rb_no_fatigue
-            2131296353 -> "Leve"       // rb_mild_fatigue
-            2131296354 -> "Moderado/a"  // rb_moderate_fatigue
-            2131296355 -> "Severo/a"    // rb_severe_fatigue
+            // Fatiga
+            R.id.rb_no_fatigue -> "No"
+            R.id.rb_mild_fatigue -> "Leve"
+            R.id.rb_moderate_fatigue -> "Moderado/a"
+            R.id.rb_severe_fatigue -> "Severo/a"
 
-            // Infecciones (cuarto RadioGroup)
-            2131296356 -> "No"                     // rb_no_infections
-            2131296357 -> "Infección de garganta"  // rb_throat_infection
-            2131296358 -> "Infección de piel"      // rb_skin_infection
-            2131296359 -> "Otra"                   // rb_other_infection
+            // Infecciones
+            R.id.rb_no_infections -> "No"
+            R.id.rb_throat_infection -> "Infección de garganta"
+            R.id.rb_skin_infection -> "Infección de piel"
+            R.id.rb_other_infection -> "Otra"
 
-            // Presión arterial (quinto RadioGroup)
-            2131296360 -> "Normal"      // rb_normal_bp
-            2131296361 -> "Alta"        // rb_high_bp
-            2131296362 -> "No lo sé"    // rb_dont_know_bp
+            // Presión arterial
+            R.id.rb_normal_bp -> "Normal"
+            R.id.rb_high_bp -> "Alta"
+            R.id.rb_dont_know_bp -> "No lo sé"
 
             else -> "Respuesta seleccionada"
         }
