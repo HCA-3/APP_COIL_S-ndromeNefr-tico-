@@ -279,6 +279,18 @@
             </GhostTextMetaData>
           </value>
         </entry>
+        <entry key="los colores que me dijiste no eran, son estos:&#10;Gochujang Red: #780000&#10;Crimson Blaze: #C1121F&#10;Varden: #AE1F23&#10;Cosmos blue: #003049&#10;Blue Marble: #669BBC">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1761056383081" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
         <entry key="me sale este error al ejecutar el programae: file:///C:/Users/dsant/AndroidStudioProjects/Coil_app/app/src/main/java/com/example/coil_app/MainActivity.kt:65:22 Unresolved reference 'Intent'.&#10;Ask Gemini">
           <value>
             <GhostTextMetaData>
@@ -346,6 +358,18 @@
               <option name="timestamps">
                 <list>
                   <option value="1760739651357" />
+                </list>
+              </option>
+            </GhostTextMetaData>
+          </value>
+        </entry>
+        <entry key="quiero que ajustes los colores a esa gama de colores en el proyecto">
+          <value>
+            <GhostTextMetaData>
+              <option name="count" value="1.0" />
+              <option name="timestamps">
+                <list>
+                  <option value="1761056106268" />
                 </list>
               </option>
             </GhostTextMetaData>

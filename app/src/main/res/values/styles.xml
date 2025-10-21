@@ -3,13 +3,13 @@
     <!-- Tema base de la aplicación -->
     <style name="Theme.Coil_app" parent="Theme.MaterialComponents.DayNight">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/cosmos_blue</item>
-        <item name="colorPrimaryVariant">@color/blue_marble</item>
+        <item name="colorPrimary">@color/gochujang_red</item>
+        <item name="colorPrimaryVariant">@color/crimson_blaze</item>
         <item name="colorOnPrimary">@color/white</item>
 
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/crimson_blaze</item>
-        <item name="colorSecondaryVariant">@color/varden</item>
+        <item name="colorSecondary">@color/varden</item>
+        <item name="colorSecondaryVariant">@color/cosmos_blue</item>
         <item name="colorOnSecondary">@color/white</item>
 
         <!-- Status bar color. -->
@@ -17,32 +17,32 @@
 
         <!-- Customize your theme here. -->
         <item name="colorSurface">@color/white</item>
-        <item name="colorOnSurface">@color/cosmos_blue</item>
+        <item name="colorOnSurface">@color/gochujang_red</item>
         <item name="android:colorBackground">@color/white</item>
-        <item name="android:colorForeground">@color/cosmos_blue</item>
+        <item name="android:colorForeground">@color/gochujang_red</item>
     </style>
 
     <!-- Tema claro -->
     <style name="Theme.Coil_app.Light" parent="Theme.Coil_app">
-        <item name="colorPrimary">@color/cosmos_blue</item>
-        <item name="colorPrimaryVariant">@color/blue_marble</item>
+        <item name="colorPrimary">@color/gochujang_red</item>
+        <item name="colorPrimaryVariant">@color/crimson_blaze</item>
         <item name="colorOnPrimary">@color/white</item>
-        <item name="colorSecondary">@color/crimson_blaze</item>
-        <item name="colorSecondaryVariant">@color/varden</item>
+        <item name="colorSecondary">@color/varden</item>
+        <item name="colorSecondaryVariant">@color/cosmos_blue</item>
         <item name="colorOnSecondary">@color/white</item>
         <item name="colorSurface">@color/white</item>
-        <item name="colorOnSurface">@color/cosmos_blue</item>
+        <item name="colorOnSurface">@color/gochujang_red</item>
         <item name="android:colorBackground">@color/white</item>
-        <item name="android:colorForeground">@color/cosmos_blue</item>
+        <item name="android:colorForeground">@color/gochujang_red</item>
     </style>
 
     <!-- Tema oscuro -->
     <style name="Theme.Coil_app.Dark" parent="Theme.Coil_app">
-        <item name="colorPrimary">@color/blue_marble</item>
-        <item name="colorPrimaryVariant">@color/cosmos_blue</item>
+        <item name="colorPrimary">@color/crimson_blaze</item>
+        <item name="colorPrimaryVariant">@color/gochujang_red</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="colorSecondary">@color/varden</item>
-        <item name="colorSecondaryVariant">@color/crimson_blaze</item>
+        <item name="colorSecondaryVariant">@color/blue_marble</item>
         <item name="colorOnSecondary">@color/white</item>
         <item name="colorSurface">@color/card_background_dark</item>
         <item name="colorOnSurface">@color/text_primary_dark</item>

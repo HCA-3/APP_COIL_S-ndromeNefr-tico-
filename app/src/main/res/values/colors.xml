@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Paleta de colores para la aplicación -->
+    <!-- Paleta de colores principales para la aplicación -->
     <color name="gochujang_red">#780000</color>
     <color name="crimson_blaze">#C1121F</color>
     <color name="varden">#AE1F23</color>
+
+    <!-- Colores secundarios -->
     <color name="cosmos_blue">#003049</color>
     <color name="blue_marble">#669BBC</color>
 
